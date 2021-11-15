@@ -451,8 +451,8 @@ class User(object):
                                 replies.append({'commentId':resp['comment']['commentId'],'songId':songId})
                             else:
                                 #print('回复错误，错误详情:'+str(resp))
-                            # time.sleep(152)
-                            time.sleep(1)
+                            	 # time.sleep(152)
+                                time.sleep(1)
 
                     elif desp == "回复粉丝私信":
                         if len(tasks[desp]['id'])>0:
