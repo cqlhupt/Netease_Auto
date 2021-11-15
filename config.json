@@ -1,10 +1,10 @@
 {
     "users": [
         {
-            "username": process.env.ACCOUNT,
+            "username": $ACCOUNT,
             /* 是否使用md5密码，若为false，请使用原密码，若为true，请使用md5加密后的密码 */
             "md5": false,
-            "password": process.env.PASSWORD
+            "password": $PASSWORD
             /* 若每个账号的任务设置不同,请在下方单独设置 */
             /* "setting":{} */
         } /*,{
@@ -21,7 +21,7 @@
             /* 是否启用server酱微信推送 */
             "on": true,
             /* server酱SCKEY */
-            "SCKEY": process.env.PUSH_KEY
+            "SCKEY": $PUSH_KEY
         },
         /* Cool Push酷推QQ推送 */
         "CoolPush": {
