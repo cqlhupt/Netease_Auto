@@ -1,5 +1,5 @@
 # coding: utf-8
-import requests, json, re
+import requests, json, re, os
 from user import User
 from wecom import WeComtAlert
 
@@ -23,7 +23,8 @@ def start():
                 user_setting[key] = user_config['setting'][key]
 
         user = User()
-        user.setUser(username=user_config['username'], password=user_config['password'],isMd5=user_config['md5'],user_setting=user_setting,No=user_count)  
+        #user.setUser(username=user_config['username'], password=user_config['password'],isMd5=user_config['md5'],user_setting=user_setting,No=user_count)  
+        user.setUser(username=os.getenv('ACCOUNT'), password=os.getenv('PASSWORD'),isMd5=user_config['md5'],user_setting=user_setting,No=user_count)
         if user.isLogined:  
             user.userInfo()   
 
@@ -51,7 +52,8 @@ def start():
                 user.play_playlists()                   
 
         user.msg = user.msg.strip()
-        sckey = user_setting['serverChan']['SCKEY']
+        #sckey = user_setting['serverChan']['SCKEY']
+        sckey = os.getenv('PUSH_KEY')
         if user_setting['serverChan']['on'] and sckey != '':
             if sckey in SCKEYs:                
                 SCKEYs[sckey]['msg'] += user.msg
