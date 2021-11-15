@@ -56,3 +56,4 @@ class WeComtAlert():
         data = json.loads(resp.text)
         if data["errcode"] != 0:
             #print("企业微信消息发送失败: "+str(data))
+
