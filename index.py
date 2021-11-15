@@ -1,4 +1,5 @@
-# coding: utf-8
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import requests, json, re, os
 from user import User
 from wecom import WeComtAlert

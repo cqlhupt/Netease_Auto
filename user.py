@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import requests, json, time, random, math, re, datetime
 from hashlib import md5
 from api import NetEase

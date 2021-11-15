@@ -1,4 +1,5 @@
-# coding: utf-8
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import json, platform, os, time, requests
 from http.cookiejar import Cookie, LWPCookieJar
 from encrypt import encrypted_request
