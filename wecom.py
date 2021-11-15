@@ -20,7 +20,7 @@ class WeComtAlert():
         if data["errcode"] == 0:
             return data["access_token"]
         else:
-            print("企业微信access_token获取失败: " + str(data))
+            #print("企业微信access_token获取失败: " + str(data))
             return None
         return None
 
@@ -55,6 +55,6 @@ class WeComtAlert():
         resp = requests.post(url, json=values)
         data = json.loads(resp.text)
         if data["errcode"] != 0:
-            print("企业微信消息发送失败: "+str(data))
+            #print("企业微信消息发送失败: "+str(data))
 
 

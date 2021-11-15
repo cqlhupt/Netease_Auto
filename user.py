@@ -68,17 +68,17 @@ class User(object):
 
     def taskUser(self, No):
         self.msg += '### 用户' + str(No) + '\n'
-        print('### 用户' + str(No))
+        #print('### 用户' + str(No))
     def taskTitle(self, title):
         self.msg += '#### ' + title + '\n'
-        print('#### ' + title)
+        #print('#### ' + title)
     def taskInfo(self, key, value=''):
         if value == '':
             self.msg += '- ' + str(key) + '\n'
-            print('- ' + str(key))
+            #print('- ' + str(key))
         else:
             self.msg += '- ' + str(key) + ': ' + str(value) + '\n'            
-            print('- ' + str(key) + ': ' + str(value))
+            #print('- ' + str(key) + ': ' + str(value))
     def finishTask(self):
         self.msg += '\n'
         print()
@@ -413,7 +413,7 @@ class User(object):
                             if resp['code'] == 200:
                                 comments.append({'commentId':resp['comment']['commentId'],'songId':songId})
                             else:
-                                print(resp)
+                                #print(resp)
                                 continue
 
                     elif desp == "回复粉丝评论":
@@ -433,7 +433,7 @@ class User(object):
                                     commentId = resp['comment']['commentId']
                                     comments.append({'commentId':commentId,'songId':songId})
                                 else:
-                                    print(resp)
+                                    #print(resp)
                                     continue
                             else:
                                 continue
@@ -450,7 +450,7 @@ class User(object):
                             if resp['code'] == 200:
                                 replies.append({'commentId':resp['comment']['commentId'],'songId':songId})
                             else:
-                                print('回复错误，错误详情:'+str(resp))
+                                #print('回复错误，错误详情:'+str(resp))
                             # time.sleep(152)
                             time.sleep(1)
 
